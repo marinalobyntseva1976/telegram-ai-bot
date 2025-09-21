@@ -4,8 +4,14 @@ import json
 import os
 from datetime import datetime
 
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+
 # Токен вашего бота (замените на ваш)
-TOKEN = "8163457654:AAH9VuFUSZtSNgIsvSqbxg0z6ww65s-rYp8"
+
 bot = telebot.TeleBot(TOKEN)
 
 # Данные о курсах AI-Adminpriority
